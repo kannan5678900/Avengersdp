@@ -3,8 +3,9 @@ import os
 import random
 import re
 import urllib
-
 import requests
+
+import config
 from telethon.tl import functions
 from telethon import TelegramClient, events, sync
 
