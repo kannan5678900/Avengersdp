@@ -41,7 +41,7 @@ async def animepp():
     img = requests.get(fy)
     with open("donottouch.jpg", "wb") as outfile:
         outfile.write(img.content)
-    return "donottouch.jpg
+    return "donottouch.jpg"
 
         file = await client.upload_file("donottouch.jpg")
         await client(functions.photos.UploadProfilePhotoRequest(file))
