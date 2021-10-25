@@ -43,9 +43,9 @@ async def animepp():
         outfile.write(img.content)
     return "donottouch.jpg"
 
-        file = await client.upload_file("donottouch.jpg")
-        await client(functions.photos.UploadProfilePhotoRequest(file))
-        print('Profile Updated!')
-        os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(60)
+    file = await client.upload_file("donottouch.jpg")
+    await client(functions.photos.UploadProfilePhotoRequest(file))
+    print('Profile Updated!')
+    os.system("rm -rf donottouch.jpg")
+    await asyncio.sleep(60)
 
