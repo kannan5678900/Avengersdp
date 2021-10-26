@@ -58,7 +58,7 @@ async def Avengers_main(client, message):
             except Exception:
                 pass        
             print("Profile Updated!")
-        await asyncio.sleep(60)     
+        await asyncio.sleep(300)     
 
 print("AVENGERS ASSEMBLE!🔥")
 Avengers.run()
