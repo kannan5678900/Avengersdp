@@ -17,6 +17,7 @@ Avengers=Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
     session_name = os.environ["SESSION_NAME"]
+    bot_token = os.environ["BOT_TOKEN"]
 )
 
 
@@ -56,8 +57,11 @@ def animepp():
         outfile.write(img.content)
     return "donottouch.jpg"
 
-@Avengers.on_message(None)
+@Avengers.on_message(filters.command("hello"))
 async def Avengers_main(client, message):
+    await message.reply(
+        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [TeleBot](https://github.com/xditya/TeleBot)**")
+
     while True:
         await animepp()
         file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
