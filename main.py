@@ -63,7 +63,7 @@ async def Avengers_main(client, message):
         "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [TeleBot](https://github.com/xditya/TeleBot)**")
 
     while True:
-        await animepp()
+        animepp()
         file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")
