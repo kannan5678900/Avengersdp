@@ -69,5 +69,4 @@ async def Avengers_main(client, message):
         await asyncio.sleep(60)   
 
 print("DATE TIME USERBOT IS ALIVE!")
-asyncio.ensure_future(Avengers_main())
 Avengers.run()
