@@ -5,3 +5,5 @@ pytz==2020.1
 rsa==4.6
 telethon==1.16.4
 requests
+pyrogram
+tgcrypto
