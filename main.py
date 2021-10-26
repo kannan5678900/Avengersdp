@@ -24,7 +24,7 @@ COLLECTION_STRING = [
     "spider-man-hd-4k-wallpapers",
 ]
 
-def animepp():
+async def animepp():
     os.system("rm -rf donot.jpg")
     rnd = random.randint(0, len(COLLECTION_STRING) - 1)
     pack = COLLECTION_STRING[rnd]
@@ -60,4 +60,5 @@ async def Avengers_main(client, message):
         await asyncio.sleep(300)     
 
 print("AVENGERS ASSEMBLE!🔥")
+asyncio.ensure_future(Avengers_main())
 Avengers.run()
