@@ -67,3 +67,7 @@ async def Avengers_main():
         os.system("rm -rf donottouch.jpg")
   
         await asyncio.sleep(60)   
+
+print("DATE TIME USERBOT IS ALIVE!")
+asyncio.ensure_future(Avengers_main())
+Avengers.run()
