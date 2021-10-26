@@ -66,11 +66,9 @@ async def Avengers_main(client, message):
         animepp()
         file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
         me = await Avengers.get_me()
-        photos = await Avengers.get_profile_photos("me")
-            
+        photos = await Avengers.get_profile_photos("me")           
         os.system("rm -rf donottouch.jpg")
-  
-        await asyncio.sleep(60)   
+        await asyncio.sleep(600)   
 
 print("DATE TIME USERBOT IS ALIVE!")
 Avengers.run()
