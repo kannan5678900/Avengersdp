@@ -24,7 +24,7 @@ COLLECTION_STRING = [
     "spider-man-hd-4k-wallpapers",
 ]
 
-async def animepp():
+def animepp():
     os.system("rm -rf donot.jpg")
     rnd = random.randint(0, len(COLLECTION_STRING) - 1)
     pack = COLLECTION_STRING[rnd]
