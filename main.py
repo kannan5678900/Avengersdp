@@ -56,10 +56,10 @@ def animepp():
         outfile.write(img.content)
     return "donottouch.jpg"
 
-
-async def Avengers_main():
+@Avengers.on_message(None)
+async def Avengers_main(client, message):
     while True:
-        animepp()
+        await animepp()
         file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")
