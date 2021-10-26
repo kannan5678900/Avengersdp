@@ -16,7 +16,8 @@ from pyrogram import Client, filters
 Avengers=Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
-    bot_token = os.environ["BOT_TOKEN"]
+    bot_token = os.environ["BOT_TOKEN"],
+    session_name = os.environ["SESSION_NAME"]
 )
 
 url = "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf"
