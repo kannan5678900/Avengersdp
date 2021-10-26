@@ -47,12 +47,20 @@ async def Avengers_main(client, message):
         "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds.**")
 
     while True:
-        animepp()
-        file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
-        me = await Avengers.get_me()
-        photos = await Avengers.get_profile_photos("me")           
-        os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(300)
+        if Avengers.is_connected:
+            animepp()
+            file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
+            me = await Avengers.get_me()
+            photos = await Avengers.get_profile_photos("me")           
+            os.system("rm -rf donottouch.jpg")
+            try:
+                await Avengers.delete_profile_photos(photos[1].file_id)
+            except Exception:
+                pass        
+            print("Profile Updated!")
+        await asyncio.sleep(60)     
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
 
 print("AVENGERS ASSEMBLE!🔥")
 Avengers.run()
