@@ -16,13 +16,10 @@ from pyrogram import Client, filters
 Avengers=Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
-    session_name = os.environ["SESSION_NAME"],
     bot_token = os.environ["BOT_TOKEN"]
 )
 
-
 url = "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf"
-
 
 COLLECTION_STRING = [
     "avengers-logo-wallpaper",
@@ -68,6 +65,7 @@ async def Avengers_main(client, message):
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")           
         os.system("rm -rf donottouch.jpg")
+        await asyncio.sleep(300)
         await Avengers.delete_profile_photos(photos[1].file_id)
         await asyncio.sleep(600)   
 
