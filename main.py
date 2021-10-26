@@ -3,7 +3,7 @@ import os
 import random
 import re
 import urllib
-import config
+# import config
 
 import requests
 # from telethon.tl import functions
