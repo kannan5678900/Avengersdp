@@ -3,15 +3,9 @@ import os
 import random
 import re
 import urllib
-# import config
-
 import requests
-# from telethon.tl import functions
-# from telethon import TelegramClient, events
 
 from pyrogram import Client, filters
-# from pyrogram.api import functions
-
 
 Avengers=Client(
     api_id = int(os.environ["API_ID"]),
@@ -28,26 +22,18 @@ COLLECTION_STRING = [
     "avengers-iphone-wallpaper",
     "iron-man-wallpaper-1920x1080",
     "iron-man-wallpapers",
+    "spider-man-hd-4k-wallpapers",
 ]
 
 def animepp():
-
     os.system("rm -rf donot.jpg")
-
     rnd = random.randint(0, len(COLLECTION_STRING) - 1)
-
     pack = COLLECTION_STRING[rnd]
-
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
-
     f = re.compile(r"/\w+/full.+.jpg")
-
     f = f.findall(pc)
-
     fy = "http://getwallpapers.com" + random.choice(f)
-
     print(fy)
-
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve(url, "f.ttf")
     img = requests.get(fy)
@@ -55,10 +41,10 @@ def animepp():
         outfile.write(img.content)
     return "donottouch.jpg"
 
-@Avengers.on_message(filters.command("hello"))
+@Avengers.on_message(filters.command("avengers"))
 async def Avengers_main(client, message):
     await message.reply(
-        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds. By [TeleBot](https://github.com/xditya/TeleBot)**")
+        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP in 5 seconds.**")
 
     while True:
         animepp()
@@ -66,9 +52,7 @@ async def Avengers_main(client, message):
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")           
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(300)  
-        await Avengers.delete_profile_photos(photos[1].file_id)
-        await asyncio.sleep(600)
+        await asyncio.sleep(300)
 
-print("DATE TIME USERBOT IS ALIVE!")
+print("AVENGERS ASSEMBLE!🔥")
 Avengers.run()
