@@ -59,7 +59,7 @@ def animepp():
 
 async def Avengers_main():
     while True:
-        await animepp()
+        animepp()
         file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")
