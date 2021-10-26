@@ -1,0 +1,41 @@
+{
+    "name": "Music-Bot",
+    "description": "Avengers Telegram Profile",
+    "logo": "https://telegra.ph/file/c3c4ebdc70fa7a5510968.jpg",
+    "keywords": [
+        "Avengers",
+        "Music-Bot",
+        "Telegram Bot",
+        "Kannan"
+    ],
+    "env": {
+        "API_ID": {
+            "description": "Get from my.telegram.org/apps",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get from my.telegram.org/apps",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "A valid Pyrogram session name",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
