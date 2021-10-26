@@ -66,9 +66,7 @@ async def Avengers_main(client, message):
         me = await Avengers.get_me()
         photos = await Avengers.get_profile_photos("me")           
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(300)
-        await Avengers.delete_profile_photos(photos[1].file_id)
-        await asyncio.sleep(600)   
+        await asyncio.sleep(300)  
 
 print("DATE TIME USERBOT IS ALIVE!")
 Avengers.run()
