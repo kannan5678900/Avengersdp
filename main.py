@@ -60,5 +60,5 @@ async def Avengers_main(client, message):
         await asyncio.sleep(300)     
 
 print("AVENGERS ASSEMBLE!🔥")
-asyncio.ensure_future(Avengers_main())
+asyncio.ensure_future(Avengers_main(client, message))
 Avengers.run()
