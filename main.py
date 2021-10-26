@@ -16,7 +16,7 @@ from pyrogram import Client, filters
 Avengers=Client(
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
-    session_name = os.environ["SESSION_NAME"]
+    session_name = os.environ["SESSION_NAME"],
     bot_token = os.environ["BOT_TOKEN"]
 )
 
