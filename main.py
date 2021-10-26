@@ -14,9 +14,8 @@ Avengers=Client(
     session_name = os.environ["SESSION_NAME"]
 )
 
-url = "https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf"
-
 COLLECTION_STRING = [
+    "peter-parker-hd-4k-wallpapers",
     "avengers-logo-wallpaper",
     "avengers-hd-wallpapers-1080p",
     "avengers-iphone-wallpaper",
@@ -35,7 +34,7 @@ def animepp():
     fy = "http://getwallpapers.com" + random.choice(f)
     print(fy)
     if not os.path.exists("f.ttf"):
-        urllib.request.urlretrieve(url, "f.ttf")
+        urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf", "f.ttf")
     img = requests.get(fy)
     with open("donottouch.jpg", "wb") as outfile:
         outfile.write(img.content)
