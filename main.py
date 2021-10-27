@@ -47,7 +47,7 @@ async def Avengers_main(client, message):
 
     while True:
         if Avengers.is_connected:
-            await animepp()
+            animepp()
             file = await Avengers.set_profile_photo(photo="donottouch.jpg")        
             me = await Avengers.get_me()
             photos = await Avengers.get_profile_photos("me")           
