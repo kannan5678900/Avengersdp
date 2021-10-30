@@ -15,13 +15,12 @@ Avengers=Client(
 )
 
 COLLECTION_STRING = [
-    "peter-parker-hd-4k-wallpapers",
-    "avengers-logo-wallpaper",
+    "tom-&-jerry-iphone-wallpaper",
     "avengers-hd-wallpapers-1080p",
     "avengers-iphone-wallpaper",
     "iron-man-wallpaper-1920x1080",
-    "iron-man-wallpapers",
-    "spider-man-hd-4k-wallpapers",
+    "indian-foods-wallpaper-1920x1080",
+    "spiderman-hd-4k-wallpapers",
 ]
 
 def animepp():
