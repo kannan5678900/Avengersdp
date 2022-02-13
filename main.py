@@ -39,6 +39,10 @@ def animepp():
         outfile.write(img.content)
     return "donottouch.jpg"
 
+@Avengers.on_message(filters.command("start"))
+async def start(client, message):
+    await message.reply(f"**Hello {mention} !**\nI am DP Changing Bot made by @Peterparker6 .")
+
 @Avengers.on_message(filters.command("avengers"))
 async def Avengers_main(client, message):
     await message.reply(
