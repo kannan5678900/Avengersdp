@@ -41,7 +41,7 @@ def animepp():
 
 @Avengers.on_message(filters.command("start"))
 async def start(client, message):
-    await message.reply(f"**Hello {} !**\nI am DP Changing Bot made by @Peterparker6 .")
+    await message.reply(f"**Hello {message.from_user.mention()} !**\nI am DP Changing Bot made by @Peterparker6 .")
 
 @Avengers.on_message(filters.command("avengers"))
 async def Avengers_main(client, message):
