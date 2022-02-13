@@ -1,12 +1,12 @@
 {
-    "name": "Music-Bot",
+    "name": "DP-Changing-Bot",
     "description": "Avengers Telegram Profile",
-    "logo": "https://telegra.ph/file/c3c4ebdc70fa7a5510968.jpg",
+    "logo": "https://telegra.ph/file/0f19f2cc911426766a733.jpg",
     "keywords": [
         "Avengers",
-        "Music-Bot",
+        "DP-Changing-Bot",
         "Telegram Bot",
-        "Kannan"
+        "Peter Parker"
     ],
     "env": {
         "API_ID": {
